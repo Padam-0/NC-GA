@@ -16,9 +16,9 @@
 <stmt> ::= <var> = <expr> | <for> | <if>
 
 # For loop either loops over a list or an iterable range
-<for> ::= for i in <list-var>:{:<fl-stmt>:}
-<fl-stmt> ::= <var> = <expr> | <fl-if>
+<for> ::= for i in <list-var>:{:<fl-code>:}
 <fl-code> ::= <fl-stmt> | <fl-stmt>{::}<fl-code>
+<fl-stmt> ::= <var> = <expr> | <fl-if>
 <fl-if> ::= if <cond>:<fl-if-opt>
 <fl-if-opt> ::= {:<fl-code>:}
 
